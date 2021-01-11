@@ -1,0 +1,26 @@
+{
+  "name": "bootcamp-pern-graphql-backend",
+  "version": "1.0.0",
+  "description": "PERN stack (GraphQL backend) starter-code, created for Blueprint bootcamp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r esm -r dotenv/config -L server.js"
+  },
+  "author": "UW Blueprint",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.19.1",
+    "apollo-server-express": "^2.19.1",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "lodash": "^4.17.20",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
