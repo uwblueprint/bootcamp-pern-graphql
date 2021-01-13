@@ -48,17 +48,13 @@ export default BasicTable;
 BasicTable.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      aluminum: PropTypes.number,
-      batteries: PropTypes.number,
-      bottles: PropTypes.number,
-      cans: PropTypes.number,
-      cardboard: PropTypes.number,
-      computer_parts: PropTypes.number,
-      glass: PropTypes.number,
-      id: PropTypes.number,
-      paper: PropTypes.number,
-      teacher: PropTypes.string,
-      wood: PropTypes.number
+      address: PropTypes.string,
+      budget: PropTypes.string,
+      description: PropTypes.string,
+      id: PropTypes.string,
+      name: PropTypes.string,
+      rating: PropTypes.number,
+      type: PropTypes.string
     })
   )
 };
