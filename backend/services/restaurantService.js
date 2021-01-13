@@ -33,7 +33,7 @@ async function updateRestaurant(id, name, address, type, budget, description, ra
         where: { id: id }
     });
 
-    if (updateResult[0] === 0) {
+    if (updateResult[0] === 1) {
         return updateResult[1][0];
     } else {
         return null;
