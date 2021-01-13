@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 const apolloClient = new ApolloClient({
-  uri: "http://localhost:5000/graphql", // TODO: put this in an .env file
+  uri: `${process.env.REACT_APP_GRAPHQL_SERVER_URL}/graphql`,
   cache: new InMemoryCache()
 });
 
