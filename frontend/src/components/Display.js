@@ -19,7 +19,7 @@ const restaurantsQuery = gql`
   }
 `;
 
-function Display(props) {
+const Display = (props) => {
   /**
    * useQuery is a React Hook (refer to accompanying slides for a quick explanation).
    * when this component renders, it executes the provided GraphQL query using our

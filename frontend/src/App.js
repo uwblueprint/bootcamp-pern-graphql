@@ -6,18 +6,16 @@ import Title from './components/Title';
 import DisplayContainer from './components/DisplayContainer';
 
 /**
- * This class is the root component of your React App.
+ * This is the root component of your React App.
  * All classes and components will be imported into the project when included in this class.
  */
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-          <Title teamName="your_team_name" ></Title>
-          <DisplayContainer />
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className="App">
+      <Title teamName="your_team_name" ></Title>
+      <DisplayContainer />
+    </div>
+  );
 }
 
 export default App;
