@@ -165,3 +165,5 @@ mutation {
     deleteRestaurantGroup(id: 1)
 }
 ```
+
+3. Modify the `deleteRestaurant` mutation logic so that deleting a restaurant will result in its removal from all the groups that it was part of
