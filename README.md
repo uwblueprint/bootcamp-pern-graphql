@@ -54,7 +54,7 @@ $ docker-compose up --build
 
 9. Go to http://localhost:5000/graphql in your browser and verify the playground is up and running:
 
-
+![Confirm backend is up](docs/running_graphql_playground.PNG)
 
 ## Useful Commands for Development
 
