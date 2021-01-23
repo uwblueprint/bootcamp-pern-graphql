@@ -32,7 +32,7 @@ $ cd bootcamp-pern-graphql
 POSTGRES_DB=bootcamp
 POSTGRES_USER=<insert-username-of-your-choice>
 POSTGRES_PASSWORD=<insert-password-of-your-choice>
-DB_HOST=localhost
+DB_HOST=bootcamp-pern-graphql_db_1
 ```
 
 4. Fill in frontend environment variables in `/frontend/.env.sample`, then rename the file to `.env`
@@ -46,9 +46,9 @@ REACT_APP_GRAPHQL_SERVER_URL=http://localhost:5000
 ```
 $ docker-compose up --build
 ```
-You should set `eraseDatabaseOnSync` back to `false` now.
+7. Set `eraseDatabaseOnSync` back to `false`.
 
-7. Go to http://localhost:3000 in your browser. You should see this:
+8. Go to http://localhost:3000 in your browser. You should see this:
 
 ![Complete setup](docs/complete_setup.PNG)
 
