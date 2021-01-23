@@ -27,7 +27,7 @@ $ git clone https://github.com/uwblueprint/bootcamp-pern-graphql.git
 $ cd bootcamp-pern-graphql
 ```
 
-3. Fill in backend environment variables in `/backend/.env.sample`, then rename the file to `.env`
+3. Fill in backend environment variables in `/backend/.env.sample`, then rename the file to `.env`. Tip: use `mv <old-filename> <new-filename>`
 ```
 POSTGRES_DB=bootcamp
 POSTGRES_USER=<insert-username-of-your-choice>
@@ -40,7 +40,7 @@ DB_HOST=bootcamp-pern-graphql_db_1
 REACT_APP_GRAPHQL_SERVER_URL=http://localhost:5000
 ```
 
-5. Set `eraseDatabaseOnSync` to true in `/backend/server.js` so the database will get seeded with test data when we run our application
+5. Set `eraseDatabaseOnSync` to `true` in `/backend/server.js` so the database will get seeded with test data when we run our application
 
 6. Run the application
 ```
@@ -51,6 +51,10 @@ $ docker-compose up --build
 8. Go to http://localhost:3000 in your browser. You should see this:
 
 ![Complete setup](docs/complete_setup.PNG)
+
+9. Go to http://localhost:5000/graphql in your browser and verify the playground is up and running:
+
+
 
 ## Useful Commands for Development
 
