@@ -12,7 +12,7 @@ import DisplayContainer from './components/DisplayContainer';
 const App = () => {
   return (
     <div className="App">
-      <Title teamName="your_team_name" ></Title>
+      <Title teamName="Lazeez" ></Title>
       <DisplayContainer />
     </div>
   );
