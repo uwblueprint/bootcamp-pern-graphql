@@ -8,7 +8,7 @@ import './BasicTable.scss';
  * @param {*} object data element; see typing in the PropTypes
  */
 const getTableHeaders = (object = {}) => {
-  return Object.keys(object);
+  return Object.keys(object).concat(['stars']);
 }
 
 /**
@@ -16,11 +16,19 @@ const getTableHeaders = (object = {}) => {
  * @param {*} row data element
  */
 const renderRows = (row = {}) => {
+  let starString = " ";
+  for (let i = 0; i < (Object.values(row)[Object.values(row).length - 1]); i += 1) {
+    starString += "⭐️ ";
+  }
+
   return (
     <tr key={row.id}>
       {Object.values(row).map(
-        (value, i) => <td key={i}>{value}</td>
+        (value, i) => {
+          return (<td key={i}>{value}</td>);
+        }
       )}
+      <td key={7} className="star-row">{starString}</td>
     </tr>
   )
 }
@@ -32,7 +40,7 @@ const BasicTable = ({ data }) => {
         <tr>
           {getTableHeaders(data[0]).map(
             headerName => <th key={headerName}>{headerName}</th>
-            )}
+          )}
         </tr>
         {data.map(renderRows)}
       </tbody>
@@ -54,6 +62,7 @@ BasicTable.propTypes = {
       id: PropTypes.string,
       name: PropTypes.string,
       rating: PropTypes.number,
+      stars: PropTypes.string,
       type: PropTypes.string
     })
   )
