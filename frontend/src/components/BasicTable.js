@@ -6,6 +6,10 @@ import './BasicTable.scss';
 const ADDITIONAL_HEADERS = [
   "stars"
 ];
+
+/**
+ * @param id id to determine unique key 
+ */
 const createStarEmoji = id => (
   <span key={id} role="img" aria-label="star-emoji">
     ⭐
@@ -14,18 +18,22 @@ const createStarEmoji = id => (
 
 /**
  * "Get" specifies a generic return
- * @param {*} object data element; see typing in the PropTypes
+ * @param rating data rating to determine how many emojis aree needed
  */
-const getTableHeaders = (object = {}) => {
-  return Object.keys(object);
-}
-
 const getEmojis = rating => {
   const emojis = [];
   for(let i=0; i < rating; i++) {
     emojis.push(createStarEmoji(i));
   }
   return emojis;
+}
+
+/**
+ * "Get" specifies a generic return
+ * @param {*} object data element; see typing in the PropTypes
+ */
+const getTableHeaders = (object = {}) => {
+  return Object.keys(object);
 }
 
 /**
