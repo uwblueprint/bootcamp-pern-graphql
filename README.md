@@ -78,7 +78,7 @@ Keep in mind that both the frontend and backend have hot reload enabled so you w
 
 Let's try running our first GraphQL mutation by adding a new restaurant into our directory. GraphQL is a query language and a mutation is an operation used to write data.
 
-Navigate to http://localhost:5000/graphql in a browser, this is our GraphQL Playground. Click on the "DOCS" tab on the right and you should see a couple of "function" signatures. Click on `createRestaurant(...): Restaurant` to see its full signature. To create a restaurant, we simply need to call `createRestaurant(...)` and supply some arguments containing our new restaurant's info. The return value will be our new restaurant. Note the `!` in the type declaration of the `name` parameter. It means `name` is a non-nullable parameter, so we must provide a value.
+Navigate to http://localhost:5000/graphql in a browser, this is our GraphQL Playground. Click on the "DOCS" tab on the right and you should see a couple of "function" signatures. Click on `RootMutation` and then `createRestaurant(...): Restaurant` to see its full signature. To create a restaurant, we simply need to call `createRestaurant(...)` and supply some arguments containing our new restaurant's info. The return value will be our new restaurant. Note the `!` in the type declaration of the `name` parameter. It means `name` is a non-nullable parameter, so we must provide a value.
 
 This is the syntax for a GraphQL mutation:
 ```graphql
@@ -99,7 +99,7 @@ The purpose of the first 2 lines should be pretty clear. What about the rest? Th
 
 Now, type the mutation out in the left panel of the GraphQL Playground (don't use copy & paste). You'll notice there's syntax highlighting and auto-completion! Press the run button to run the mutation.
 
-Next, let's try running a GraphQL query. Open "DOCS" again and click on `restaurant(...): Restaurant`. What do you need to do in order to retrieve the restaurant you just created?
+Next, let's try running a GraphQL query. Open "DOCS" again and click on `RootQuery` and then `restaurant(...): Restaurant`. What do you need to do in order to retrieve the restaurant you just created?
 
 ## Your Tasks
 
