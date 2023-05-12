@@ -32,7 +32,7 @@ $ cd bootcamp-pern-graphql
 POSTGRES_DB=bootcamp
 POSTGRES_USER=<insert-username-of-your-choice>
 POSTGRES_PASSWORD=<insert-password-of-your-choice>
-DB_HOST=bootcamp-pern-graphql_db_1
+DB_HOST=bootcamp-pern-graphql-db-1
 ```
 
 4. Fill in frontend environment variables in `/frontend/.env.sample`, then rename the file to `.env`
