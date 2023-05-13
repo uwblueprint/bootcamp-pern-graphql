@@ -100,4 +100,16 @@ const seedRestaurantData = [
   },
 ];
 
-export default seedRestaurantData;
+const seedRestaurantGroupData =[{
+    name: "Best Pizza Place",
+    description: "Only Campus Pizza",
+    restaurantIds: [1],
+  },
+  {
+    name: "Boba Places",
+    description: "fun boba places",
+    restaurantIds: [5,6],
+  },];
+export {seedRestaurantGroupData,seedRestaurantData};
+
+

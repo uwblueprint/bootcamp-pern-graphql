@@ -18,7 +18,7 @@ import { ApolloServer } from "apollo-server-express";
 
 import schema from "./graphql";
 import db, { sequelize } from "./models/index";
-import seedRestaurantData from "./seedRestaurantData";
+import {seedRestaurantData, seedRestaurantGroupData} from "./seedRestaurantData";
 
 
 /* create our Express.js application */
@@ -43,7 +43,7 @@ server.applyMiddleware({ app, path: "/graphql" });
  * typically migrations rather than sync() would be used to modify the DB schema, especially for production. That is because
  * they are safer and offer more fine-grained controls. However, for simplicity, we won't use migrations for bootcamp
  */
-const eraseDatabaseOnSync = false;
+const eraseDatabaseOnSync = true;
 
 /* sequelize (the variable) is an abstraction over our database connection */
 sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
@@ -60,6 +60,10 @@ sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
 async function seedDb() {
     seedRestaurantData.forEach(async (r) => {
         await db.Restaurant.create(r);
+    });
+
+    seedRestaurantGroupData.forEach(async (r) => {
+        await db.RestaurantGroup.create(r);
     });
 
     console.info("Successfully seeded the database!");
