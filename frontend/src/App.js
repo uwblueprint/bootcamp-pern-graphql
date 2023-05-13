@@ -13,10 +13,9 @@ import CreateRestaurantPortal from './components/CreateRestaurantPortal';
 const App = () => {
   return (
     <div className="App">
-      
       <Title teamName="your_team_name"></Title>
       {window.location.pathname === "/" && <DisplayContainer />}
-      {window.location.pathname == "/create-restaurant-group" && <CreateRestaurantPortal />}
+      {window.location.pathname === "/create-restaurant-group" && <CreateRestaurantPortal />}
     </div>
   );
 }
