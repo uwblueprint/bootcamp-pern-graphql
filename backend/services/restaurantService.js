@@ -23,39 +23,43 @@ async function getRestaurants() {
 }
 
 async function createRestaurant(name, address, type, budget, description, rating) {
-    return await db.Restaurant.create({
-        name,
-        address,
-        type,
-        budget,
-        description,
-        rating
-    });
+  return await db.Restaurant.create({
+    name,
+    address,
+    type,
+    budget,
+    description,
+    rating,
+    numRatings: 1,
+  });
 }
 
-async function updateRestaurant(id, name, address, type, budget, description, rating) {
-    const updateResult = await db.Restaurant.update({
-        name,
-        address,
-        type,
-        budget,
-        description,
-        rating
+async function updateRestaurant(id, name, address, type, budget, description, rating, numRatings = 1) {
+  const updateResult = await db.Restaurant.update(
+    {
+      name,
+      address,
+      type,
+      budget,
+      description,
+      rating,
+      numRatings,
     },
     {
-        returning: true,
-        where: { id: id }
-    });
-
-    /**
-     * Sequelize's update() method returns an array.
-     * the first element is the number of records updated,
-     * the second element is an array of the records updated */
-    if (updateResult[0] === 1) {
-        return updateResult[1][0];
-    } else {
-        return null;
+      returning: true,
+      where: { id: id },
     }
+  );
+
+  /**
+   * Sequelize's update() method returns an array.
+   * the first element is the number of records updated,
+   * the second element is an array of the records updated */
+  if (updateResult[0] === 1) {
+    return updateResult[1][0];
+  } else {
+    return null;
+  }
 }
 
 async function deleteRestaurant(id) {
