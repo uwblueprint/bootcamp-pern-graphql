@@ -12,32 +12,33 @@ import { gql } from "apollo-server-express";
  * - similarly, nested under "extend type Mutation { ... }", we have signatures for 3 mutations
  */
 const restaurantType = gql`
-    enum Budget {
-        LOW
-        MEDIUM
-        HIGH
-    }
+  enum Budget {
+    LOW
+    MEDIUM
+    HIGH
+  }
 
-    type Restaurant {
-        id: ID!
-        name: String
-        address: String
-        type: String
-        budget: Budget
-        description: String
-        rating: Int
-    }
+  type Restaurant {
+    id: ID!
+    name: String
+    address: String
+    type: String
+    budget: Budget
+    description: String
+    rating: Int
+    numRatings: Int
+  }
 
-    extend type Query {
-        restaurant(id: ID!): Restaurant
-        restaurants: [Restaurant!]!
-    }
+  extend type Query {
+    restaurant(id: ID!): Restaurant
+    restaurants: [Restaurant!]!
+  }
 
-    extend type Mutation {
-        createRestaurant(name: String!, address: String, type: String, budget: Budget, description: String, rating: Int) : Restaurant
-        updateRestaurant(id: ID!, name: String!, address: String, type: String, budget: Budget, description: String, rating: Int) : Restaurant
-        deleteRestaurant(id: ID!) : ID
-    }
+  extend type Mutation {
+    createRestaurant(name: String!, address: String, type: String, budget: Budget, description: String, rating: Int): Restaurant
+    updateRestaurant(id: ID!, name: String!, address: String, type: String, budget: Budget, description: String, rating: Int, numRatings: Int): Restaurant
+    deleteRestaurant(id: ID!): ID
+  }
 `;
 
 export default restaurantType;
