@@ -12,8 +12,8 @@ import DisplayContainer from './components/DisplayContainer';
 const App = () => {
   return (
     <div className="App">
-      <Title teamName="your_team_name" ></Title>
-      <DisplayContainer />
+      <Title teamName="your_team_name"></Title>
+      {window.location.pathname === "/" && <DisplayContainer />}
     </div>
   );
 }
