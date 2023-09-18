@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import "./SignIn.scss";
 
-const [isSubmitted, setIsSubmitted] = useState(false);
+const SignIn = ({ isSubmitted, setIsSubmitted }) => {
+  const extraSecureCheckFunction = (event) => {
+    event.preventDefault();
+    setIsSubmitted(true);
+  };
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  setIsSubmitted(true);
-};
-
-const SignIn = ({}) => {
   return (
     <div className="form">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={extraSecureCheckFunction}>
         <div className="input-container">
           <label>Username </label>
           <input type="text" name="uname" required />
