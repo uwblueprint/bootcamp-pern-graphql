@@ -1,32 +1,38 @@
 /* can't use ES6 export syntax due to incompatibility with sequelize */
 module.exports = (sequelize, DataTypes) => {
     /* create the model corresponding to the restaurant PostgreSQL table */
-    const Restaurant = sequelize.define("restaurant", {
+    const Restaurant = sequelize.define(
+      "restaurant",
+      {
         /* sequelize automatically defines an id column as primary key */
         name: {
-            type: DataTypes.STRING,
-            allowNull: false
+          type: DataTypes.STRING,
+          allowNull: false,
         },
         address: {
-            type: DataTypes.STRING,
+          type: DataTypes.STRING,
         },
         type: {
-            type: DataTypes.STRING,
+          type: DataTypes.STRING,
         },
         budget: {
-            type: DataTypes.ENUM,
-            values: ["LOW", "MEDIUM", "HIGH"]
+          type: DataTypes.ENUM,
+          values: ["LOW", "MEDIUM", "HIGH"],
         },
         description: {
-            type: DataTypes.STRING,
+          type: DataTypes.STRING,
         },
         rating: {
-            type: DataTypes.INTEGER,
+          type: DataTypes.INTEGER,
         },
-    },
-    {
-        timestamps: false
-    });
+        ratingScore: {
+          type: DataTypes.STRING,
+        },
+      },
+      {
+        timestamps: false,
+      }
+    );
 
     return Restaurant;
 }

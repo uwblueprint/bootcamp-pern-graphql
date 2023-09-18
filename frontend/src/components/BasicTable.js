@@ -54,7 +54,8 @@ BasicTable.propTypes = {
       id: PropTypes.string,
       name: PropTypes.string,
       rating: PropTypes.number,
-      type: PropTypes.string
+      type: PropTypes.string,
+      ratingScore: PropTypes.string
     })
   )
 };

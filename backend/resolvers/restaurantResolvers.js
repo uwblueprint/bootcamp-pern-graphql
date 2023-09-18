@@ -47,15 +47,15 @@ const restaurantResolvers = {
       }
     },
     Mutation: {
-      createRestaurant: async (_parent, { name, address, type, budget, description, rating }) => {
+      createRestaurant: async (_parent, { name, address, type, budget, description, rating, ratingScore }) => {
         validateRating(rating);
 
-        return await restaurantService.createRestaurant(name, address, type, budget, description, rating);
+        return await restaurantService.createRestaurant(name, address, type, budget, description, rating, ratingScore );
       },
-      updateRestaurant: async (_parent, { id, name, address, type, budget, description, rating }) => {
+      updateRestaurant: async (_parent, { id, name, address, type, budget, description, rating, ratingScore }) => {
         validateRating(rating);
         
-        return await restaurantService.updateRestaurant(id, name, address, type, budget, description, rating);
+        return await restaurantService.updateRestaurant(id, name, address, type, budget, description, rating, ratingScore );
       },
       deleteRestaurant: async (_parent, { id }) => {
         return await restaurantService.deleteRestaurant(id);
