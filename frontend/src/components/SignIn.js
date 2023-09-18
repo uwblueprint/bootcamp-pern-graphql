@@ -5,6 +5,7 @@ import "./SignIn.scss";
 
 const SignIn = ({ isSubmitted, setIsSubmitted }) => {
   const extraSecureCheckFunction = (event) => {
+    var { uname, pass } = document.forms[0];
     event.preventDefault();
     setIsSubmitted(true);
   };
