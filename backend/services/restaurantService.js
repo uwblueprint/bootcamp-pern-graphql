@@ -22,25 +22,27 @@ async function getRestaurants() {
     return await db.Restaurant.findAll();
 }
 
-async function createRestaurant(name, address, type, budget, description, rating) {
+async function createRestaurant(name, address, type, budget, description, rating, ratingScore) {
     return await db.Restaurant.create({
         name,
         address,
         type,
         budget,
         description,
-        rating
+        rating,
+        ratingScore,
     });
 }
 
-async function updateRestaurant(id, name, address, type, budget, description, rating) {
+async function updateRestaurant(id, name, address, type, budget, description, rating, ratingScore) {
     const updateResult = await db.Restaurant.update({
         name,
         address,
         type,
         budget,
         description,
-        rating
+        rating,
+        ratingScore,
     },
     {
         returning: true,

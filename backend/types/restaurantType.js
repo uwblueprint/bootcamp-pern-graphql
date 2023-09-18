@@ -26,6 +26,7 @@ const restaurantType = gql`
         budget: Budget
         description: String
         rating: Int
+        ratingScore: String
     }
 
     extend type Query {
@@ -34,8 +35,8 @@ const restaurantType = gql`
     }
 
     extend type Mutation {
-        createRestaurant(name: String!, address: String, type: String, budget: Budget, description: String, rating: Int) : Restaurant
-        updateRestaurant(id: ID!, name: String!, address: String, type: String, budget: Budget, description: String, rating: Int) : Restaurant
+        createRestaurant(name: String!, address: String, type: String, budget: Budget, description: String, rating: Int, ratingScore: String) : Restaurant
+        updateRestaurant(id: ID!, name: String!, address: String, type: String, budget: Budget, description: String, rating: Int, ratingScore: String) : Restaurant
         deleteRestaurant(id: ID!) : ID
     }
 `;

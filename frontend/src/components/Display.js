@@ -15,6 +15,7 @@ const restaurantsQuery = gql`
       budget
       description
       rating
+      ratingScore
     }
   }
 `;

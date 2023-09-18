@@ -91,6 +91,7 @@ mutation {
     budget
     description
     rating
+    ratingScore
   }
 }
 ```
