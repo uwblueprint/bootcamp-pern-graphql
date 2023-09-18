@@ -34,7 +34,7 @@ const seedRestaurantData = [
     budget: "LOW",
     description: "good selection on the menu, sushi, ramen, curry, etc.",
     rating: 4,
-    ratingScore: "2/5",
+    ratingScore: "4/5",
   },
   {
     name: "CoCo",
@@ -43,7 +43,7 @@ const seedRestaurantData = [
     budget: "LOW",
     description: "relatively cheap bubble tea",
     rating: 3,
-    ratingScore: "2/5",
+    ratingScore: "3/5",
   },
   {
     name: "Sharetea",
@@ -52,7 +52,7 @@ const seedRestaurantData = [
     budget: "MEDIUM",
     description: "more expensive bubble tea",
     rating: 3,
-    ratingScore: "2/5",
+    ratingScore: "3/5",
   },
   {
     name: "Williams Fresh Cafe",
@@ -61,7 +61,7 @@ const seedRestaurantData = [
     budget: "MEDIUM",
     description: "good study spot",
     rating: 3,
-    ratingScore: "2/5",
+    ratingScore: "3/5",
   },
   {
     name: "O'My Bakery",
@@ -70,7 +70,7 @@ const seedRestaurantData = [
     budget: "LOW",
     description: "good for grabbing a quick bite",
     rating: 3,
-    ratingScore: "2/5",
+    ratingScore: "3/5",
   },
   {
     name: "The Poke Box",
@@ -79,7 +79,7 @@ const seedRestaurantData = [
     budget: "MEDIUM",
     description: "good stuff!",
     rating: 4,
-    ratingScore: "2/5",
+    ratingScore: "4/5",
   },
   {
     name: "Bao Sandwich Bar",
@@ -88,7 +88,7 @@ const seedRestaurantData = [
     budget: "LOW",
     description: "good food but hard to get a seat",
     rating: 4,
-    ratingScore: "2/5",
+    ratingScore: "4/5",
   },
   {
     name: "Tim Horton's",
@@ -97,7 +97,7 @@ const seedRestaurantData = [
     budget: "LOW",
     description: "typical Tim Horton's, short walk if you live at icon",
     rating: 3,
-    ratingScore: "2/5",
+    ratingScore: "3/5",
   },
 ];
 
