@@ -4,7 +4,7 @@ const seedRestaurantData = [
     address: "160 University Ave W #2, Waterloo, ON N2L 3E9",
     type: "Pizzeria",
     budget: "LOW",
-    description: "giant slices, affordable prices",
+    description: "large slices, affordable prices",
     rating: 2,
     ratingScore: "2/5",
   },
