@@ -3,10 +3,17 @@ import PropTypes from "prop-types";
 
 import "./SignIn.scss";
 
+const [isSubmitted, setIsSubmitted] = useState(false);
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  setIsSubmitted(true);
+};
+
 const SignIn = ({}) => {
   return (
     <div className="form">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Username </label>
           <input type="text" name="uname" required />
